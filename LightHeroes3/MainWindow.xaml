@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Canvas Name="GameArea" Focusable="True" KeyDown="GameArea_KeyDown" KeyUp="GameArea_KeyUp"/>
+        <Canvas Name="GameArea" Focusable="True" KeyDown="GameArea_KeyDown" KeyUp="GameArea_KeyUp">
+            <Button x:Name="button" Content="Button" Canvas.Left="405" Canvas.Top="165" Width="75"/>
+        </Canvas>
     </Grid>
 </Window>

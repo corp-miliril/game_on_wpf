@@ -8,5 +8,6 @@ namespace LightHeroes3
 {
     class Player
     {
+        public int a = 1;
     }
 }
