@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace LightHeroes3
 {
-    class Game
+    public static class Game
     {
+
+
     }
 }

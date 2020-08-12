@@ -21,29 +21,26 @@ namespace LightHeroes3
     /// </summary>
     public partial class MainWindow : Window
     {
-        DispatcherTimer timer = new DispatcherTimer();
-
         public MainWindow()
         {
-            timer.Tick += new EventHandler(Engine);
-            timer.Interval = TimeSpan.FromMilliseconds(20);
-            timer.Start();
+            Point point = new Point(20, 30);
+            Player p = new Player("Hero");
+            p.Shape.Margin = new Thickness(point.X, point.Y, 0, 0);
+
+            Point point2 = new Point(680, 30);
+            Player p2 = new Player("Enemy");
+            p2.Shape.Margin = new Thickness(point2.X, point2.Y, 0, 0);
+
             InitializeComponent();
+            Menu.Children.Add(p.Shape);
+            Menu.Children.Add(p2.Shape);
         }
 
-        private void GameArea_KeyDown(object sender, KeyEventArgs e)
+        private void Button_start_game_Click(object sender, RoutedEventArgs e)
         {
-           
-        }
-
-        private void GameArea_KeyUp(object sender, KeyEventArgs e)
-        {
-
-        }
-        public void Engine(object sender, EventArgs e) {
-            Tank t1 = new Tank();
-            GameArea.Children.Add(t1.Shape);
-            Canvas.SetLeft(t1.Shape, 200);
+            this.Hide();
+            GameWindow win1 = new GameWindow(this);
+            win1.Show();
         }
     }
 }

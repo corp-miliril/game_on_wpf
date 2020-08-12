@@ -9,7 +9,7 @@ using System.Windows.Shapes;
 
 namespace LightHeroes3
 {
-    abstract class Unit
+    public abstract class Unit
     {
         public int damage;
         public int hp;
@@ -17,14 +17,13 @@ namespace LightHeroes3
         //public int coords;
         public int cost;
         public ImageBrush Skin = new ImageBrush();
-        public Rectangle Shape = new Rectangle();
+        public Rectangle Shape = new Rectangle() { Width = 80, Height = 80};
 
         abstract public void Attack(Unit u);
     }
 
-   
 
-    class Soldier: Unit
+    public class Soldier: Unit
     {
         public Soldier() {
             this.damage = 1;
@@ -42,7 +41,7 @@ namespace LightHeroes3
     }
 
 
-    class Tank : Unit
+    public class Tank : Unit
     {
         public Tank()
         {
@@ -61,7 +60,7 @@ namespace LightHeroes3
     }
 
 
-    class Archer : Unit
+    public class Archer : Unit
     {
         public Archer()
         {
@@ -80,7 +79,7 @@ namespace LightHeroes3
     }
 
 
-    class Archangel : Unit
+    public class Archangel : Unit
     {
         public Archangel()
         {
