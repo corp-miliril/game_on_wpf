@@ -26,7 +26,7 @@ namespace LightHeroes3
     public class Soldier: Unit
     {
         public Soldier() {
-            this.damage = 1;
+            this.damage = 20;
             this.hp = 13;
             this.defence = 10;
             this.cost = 10;
